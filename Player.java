@@ -37,9 +37,10 @@ public class Player {
    public String look(Map map) {
       // TODO: This method will take the player's current X and Y, and return the contents of the room
       // they are in with a descriptive String
+      // HINT: Use map.getRoom(currentX, currentY) and call toString()
    }
    public void moveTo(int x, int y) {
-      
+      // TODO: Update the Player's currentX and currentY values.
    }
    
    public Room getRoom(Map map) {

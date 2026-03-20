@@ -25,7 +25,7 @@ public class Item {
         };
 
    public Item() {
-      // TODO: Pick a random monster type from monsterTypes
+      // TODO: Pick a random item type from itemTypes
    }
    
    public String getItemType() {
@@ -33,5 +33,6 @@ public class Item {
    }
    
    public String toString() {
-      // TODO: Build a descriptive String for use by other methods   }
+      // TODO: Build a descriptive String for use by other methods
+   }
 }

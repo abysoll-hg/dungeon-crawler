@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
-public class Game {
-
-   
+public class Game {   
    public static void main(String[] args) {
       boolean exitGame = false;
       Game game = new Game();
@@ -13,14 +11,14 @@ public class Game {
       // TODO: Create a Map which populates each element of the grid with a Room
       // that contains a random assortment of Monsters and Items
       
-      // TODO: put the player in a random Room in the dungeon
-      
-      
+      // TODO: Create a Player at a random location in the Map
+      // HINT: Generate random row/column values using Math.random()
+      // and pass them into the Player constructor
+            
       while (exitGame != true) {
             System.out.print("Enter command: ");
             String input = scanner.nextLine().toUpperCase();
-            
-            
+                        
             if (input.equals("EXIT")) {
                 System.out.println("Exiting game. Goodbye!");
                 exitGame = true;
@@ -44,6 +42,5 @@ public class Game {
             }
          // TODO: display a message to the user telling them their current coordinates every time they move
        }
-
    }
 }
