@@ -25,6 +25,7 @@ private String monsterType;
 
    public Monster() {
       // TODO: Pick a random monster type from monsterTypes
+      monsterType = monsterTypes[(int) (Math.random()*monsterTypes.length)];
    }
    
    
@@ -34,5 +35,6 @@ private String monsterType;
    
    public String toString() {
       // TODO: Build a descriptive String for use by other methods
+      return monsterType;
    }
 }

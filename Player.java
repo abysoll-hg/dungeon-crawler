@@ -14,7 +14,7 @@ public class Player {
       this.playerName = playerName;      
       
       // TODO: create the empty Inventory
-      
+      inventory = new ArrayList<Item>();
       // TODO: set the startingX and Y of the player
       this.currentX = startingX;
       this.currentY = startingY;
@@ -22,14 +22,23 @@ public class Player {
 
    public void addItemToInventory(Item item) {
       // TODO: add an item to inventory
+      inventory.add(item);
    }
    
-   public Item removeItemFromInventory(Item item) {
+   public Item removeItemFromInventory(Item item, Map map) {
       // TODO: remove an item to inventory. Return the Item so it can returned to the Room that it is in
+      inventory.remove(item);
+      map.getRoom(currentX,currentY).addItem(item);
+      return item;
    }
    
    
    public boolean hasItem(String itemName) {
+      for (Item i : inventory) {
+         if (i.equals("itemName")) {
+            return true;
+         }
+      }
       return false;
    }
    
@@ -38,12 +47,16 @@ public class Player {
       // TODO: This method will take the player's current X and Y, and return the contents of the room
       // they are in with a descriptive String
       // HINT: Use map.getRoom(currentX, currentY) and call toString()
+      return map.getRoom(currentX, currentY).toString();
    }
    public void moveTo(int x, int y) {
       // TODO: Update the Player's currentX and currentY values.
+      this.currentX = x;
+      this.currentY = y;
    }
    
    public Room getRoom(Map map) {
       // TODO: return the room object that the player is currently in, given the Map that was passed
+      return map.getRoom(currentX,currentY);
    }
 }
